@@ -33,7 +33,7 @@ class Product(models.Model):
 
     
 class Bio(models.Model):
-    userName = models.CharField(max_length=510)
+    user_name = models.OneToOneField(People, on_delete=models.CASCADE, null=True)
     bio = models.CharField(max_length=50)
     datetime = models.DateField(auto_now_add=True)
     
